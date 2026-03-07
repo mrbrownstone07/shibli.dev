@@ -1,6 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { LuShield } from "react-icons/lu";
 import { LuGraduationCap } from "react-icons/lu";
 import bangladeshRisin from "@/public/bangladeshrisin.png";
 import connected from "@/public/connected.png";
@@ -35,13 +35,29 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Software Engineer, Karatbars Software Solutions LTD",
+    title: "Erasmus Mundus Joint Master in Applied Cybersecurity",
+    location: "Istanbul, Turkey → Germany",
+    description:
+      "Studying applied cybersecurity with a focus on system security, network defense, and offensive techniques. Currently at Kadir Has University in Istanbul; moving to Germany for the second-year specialization.",
+    icon: React.createElement(LuShield),
+    date: "2025 - 2027",
+  },
+  {
+    title: "Assistant Lead Engineer, Nagad LTD",
     location: "Dhaka, Bangladesh",
     description:
-      "I secured this position before completing my graduation and worked for 8 months as a backend and blockchain developer.",
+      "Joined as a Solution Analyst, translating business needs into scalable, secure technology solutions and collaborating with infrastructure and security teams on system design.",
     icon: React.createElement(CgWorkAlt),
-    date: "2021 - 2022",
-  }, 
+    date: "2024 - 2025",
+  },
+  {
+    title: "Associate Manager, BRAC Bank PLC",
+    location: "Dhaka, Bangladesh",
+    description:
+      "Started as a Tech MTO and was promoted to Associate Manager. Designed and delivered automation, reporting, and integration solutions for the technology division, often working closely with security and compliance requirements.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2022 - 2024",
+  },
   {
     title: "Graduated, North South University",
     location: "Dhaka, Bangladesh",
@@ -51,21 +67,13 @@ export const experiencesData = [
     date: "2022",
   },
   {
-    title: "Associate Manager, BRAC Bank PLC",
+    title: "Software Engineer, Karatbars Software Solutions LTD",
     location: "Dhaka, Bangladesh",
     description:
-      "I started as a Tech MTO and was promoted to Associate Manager after completing my MTO period. I developed many solutions to automate tasks and enhance the efficiency of the technology division.",
+      "Joined before graduation and worked as a backend and blockchain developer, building and integrating services with a strong focus on reliability and data integrity.",
     icon: React.createElement(CgWorkAlt),
-    date: "2022 - 2024",
+    date: "2021 - 2022",
   },
-  {
-    title: "Assistant Lead Engineer, Nagad LTD",
-    location: "Dhaka, Bangladesh",
-    description:
-      "I joined as a Solution Analyst, translating business needs into effective technology solutions.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2024 - Present",
-  }  
 ] as const;
 
 export const projectsData = [
@@ -82,6 +90,18 @@ export const projectsData = [
       "During the internet outages, developed an alternative mass comminication (group chat) platform.",
     tags: ["Django", "Html", "CSS", "Web Sockets", "Redis", "PostgreSQL"],
     imageUrl: connected,
+  },
+  {
+    title: "Offensive Security Labs & Hack The Box",
+    description:
+      "CTF challenges and HTB machines — exploiting misconfigs, escalating privileges, and documenting attack paths to inform defensive hardening.",
+    tags: [
+      "Pen Testing",
+      "Linux",
+      "MSFConsole",
+      "Nmap"
+    ],
+    imageUrl: wordanalyticsImg,
   },
 ] as const;
 
@@ -104,5 +124,15 @@ export const skillsData = [
   "Oracle DB",
   "MS SQL Server",
   "Data Analytics",
-  "Nginx"
+  "Nginx",
+  "Linux (server & hardening)",
+  "System Security",
+  "Network Security",
+  "Penetration Testing",
+  "Web Application Security (OWASP)",
+  "Threat Modeling",
+  "Burp Suite",
+  "Nmap",
+  "Wireshark",
+  "Metasploit",
 ] as const;

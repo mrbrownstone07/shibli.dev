@@ -3,13 +3,22 @@
 @tailwind utilities;
 
 html {
-  --line-color: #e5e7eb;
+  --line-color: rgba(0, 255, 65, 0.2);
 }
 
 html.dark {
-  --line-color: rgba(255, 255, 255, 0.2);
+  --line-color: rgba(0, 255, 65, 0.2);
 }
 
 .borderBlack {
-  @apply border border-black/10;
+  @apply border border-cyber-border;
+}
+
+body {
+  background-color: #0a0a0a !important; /* Force dark bg */
+  color: #f3f4f6 !important;
+  background-image:
+    linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px) !important;
+  background-size: 30px 30px !important;
 }

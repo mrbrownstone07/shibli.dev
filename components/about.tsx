@@ -20,25 +20,43 @@ export default function About() {
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
         After graduating with a degree in{" "}
-        <span className="font-medium">Computer Science</span> from <span className="font-medium">North South University</span>,
-        I decided to dive into the world of technology and programming. I specialize in{" "}
-        <span className="font-medium">idea to technology translation and solution development</span>, with a focus on
-        <span className="font-medium">developing financial solutions, web solutions</span> and <span className="font-medium">API development</span>.
-        My expertise extends to <span className="font-medium">application lifecycle management, fullstack web development</span> and
-        <span className="font-medium">customer journey development</span>.
+        <span className="font-medium">Computer Science</span> from{" "}
+        <span className="font-medium">North South University</span>, I spent the
+        last few years building <span className="font-medium">backend systems</span>,{" "}
+        <span className="font-medium">financial solutions</span>, and{" "}
+        <span className="font-medium">web platforms</span> as a software engineer
+        and solution analyst.
       </p>
 
       <p className="mb-3">
-        I have successfully led projects that include <span className="font-medium">automating processes</span>,
-        <span className="font-medium">developing web applications</span> for reporting and data visualization,
-        and <span className="font-medium">creating data pipelines</span> for blockchain transactions. These initiatives have {" "}
-        <span className="italic">enhanced efficiency and saved significant time and resources</span>.
+        Today I&apos;m pivoting into{" "}
+        <span className="font-medium">applied cybersecurity</span>. I&apos;m an{" "}
+        <span className="font-medium">
+          Erasmus Mundus Joint Master&apos;s student in Applied Cybersecurity
+        </span>{" "}
+        currently based at{" "}
+        <span className="font-medium">Kadir Has University in Istanbul</span>,
+        and I will continue my second-year mobility in{" "}
+        <span className="font-medium">Germany</span>. My main areas of interest
+        are <span className="font-medium">system security</span>,{" "}
+        <span className="font-medium">network defense</span>, and{" "}
+        <span className="font-medium">penetration testing</span>.
       </p>
 
       <p>
-        My core technology stack includes <span className="font-medium">Python, Django, Laravel, NextJS and various other technologies</span>.
-        I am passionate about <span className="font-medium">software engineering</span> and continually seek to expand my skill set.
-        I am always eager to tackle new challenges and explore innovative solutions.
+        I enjoy translating <span className="font-medium">attack paths</span> and{" "}
+        <span className="font-medium">misconfigurations</span>—from platforms
+        like <span className="font-medium">Hack The Box</span> and lab
+        environments—into <span className="font-medium">secure designs</span> and{" "}
+        <span className="font-medium">hardening strategies</span>. My toolkit spans{" "}
+        <span className="font-medium">
+          Python, Django, Laravel, Next.js, and database-heavy systems
+        </span>
+        , and I&apos;m actively layering on{" "}
+        <span className="font-medium">
+          offensive testing, threat modeling, and secure architecture
+        </span>{" "}
+        skills as I grow into a cybersecurity-focused engineer.
       </p>
 
 

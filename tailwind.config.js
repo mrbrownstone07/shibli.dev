@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "cyber-bg": "#0a0a0a",
+        "cyber-card": "#111111",
+        "cyber-accent": "#00ff41",
+        "cyber-border": "#333333",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

@@ -3,15 +3,14 @@ import "./globals.css";
 import { Lato } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
-import ThemeSwitch from "@/components/theme-switch";
-import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 
-const inter = Lato({ subsets: ["latin"], weight: '400' });
+const inter = Lato({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
-  title: "Shibli | Portfolio",
-  description: "Shibli is a technology professional with 3 years of diverse experience.",
+  title: "Mahdi Shibli | Applied Cybersecurity & Systems Security",
+  description:
+    "Mahdi Shibli is a software engineer and solution analyst pivoting into applied cybersecurity, focusing on system security and penetration testing.",
 };
 
 export default function RootLayout({
@@ -20,23 +19,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth dark">
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`${inter.className} bg-cyber-bg text-gray-50 relative pt-28 sm:pt-36 dark:bg-cyber-bg dark:text-gray-50 dark:text-opacity-90`}
       >
-        <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
-        <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
 
-        <ThemeContextProvider>
-          <ActiveSectionContextProvider>
-            <Header />
-            {children}
-            <Footer />
 
-            <Toaster position="top-right" />
-            <ThemeSwitch />
-          </ActiveSectionContextProvider>
-        </ThemeContextProvider>
+        <ActiveSectionContextProvider>
+          <Header />
+          {children}
+          <Footer />
+
+          <Toaster position="top-right" />
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );
