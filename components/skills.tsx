@@ -23,54 +23,101 @@ export default function Skills() {
       </div>
 
       <div>
-        <h2 className="font-display font-semibold text-[34px] m-0 mb-[36px] tracking-[-0.02em] text-[#e6e8ec] leading-[1.1]">
+        <h2 className="font-display font-semibold text-[36px] m-0 mb-[40px] tracking-tight text-[#e6e8ec] leading-[1.1]">
           Capabilities
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[50px] gap-y-[40px]">
-          <div>
-            <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#8ba6cc] mb-[16px] pb-[8px] border-b border-[#2a3547]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[50px] gap-y-[50px]">
+          {/* Languages */}
+          <div className="group relative">
+            <div className="font-mono text-[12px] font-medium tracking-[0.12em] uppercase text-[#5f6572] mb-[22px] pb-[14px] border-b border-[#17191d] group-hover:text-[#8ba6cc] group-hover:border-[#2a3547] transition-colors duration-500">
               Languages &amp; Frameworks
             </div>
-            <div className="flex flex-col gap-[12px] text-[15px] text-[#b0b5bf]">
-              <span>Python · Django · DRF · FastAPI</span>
-              <span>Laravel · PHP</span>
-              <span>JavaScript · React · Next.js</span>
-              <span>Solidity · Tailwind</span>
-            </div>
+            <ul className="flex flex-col gap-[16px]">
+              <li className="flex items-start gap-[14px] group/item cursor-default">
+                <span className="text-[#2a3547] font-mono text-[14px] mt-[1px] group-hover/item:text-[#8ba6cc] group-hover/item:-translate-y-[2px] group-hover/item:translate-x-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">↳</span>
+                <span className="text-[15px] leading-[1.6] text-[#a0a5b0] group-hover/item:text-[#e6e8ec] group-hover/item:translate-x-[4px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">Python, Django, DRF, FastAPI</span>
+              </li>
+              <li className="flex items-start gap-[14px] group/item cursor-default">
+                <span className="text-[#2a3547] font-mono text-[14px] mt-[1px] group-hover/item:text-[#8ba6cc] group-hover/item:-translate-y-[2px] group-hover/item:translate-x-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">↳</span>
+                <span className="text-[15px] leading-[1.6] text-[#a0a5b0] group-hover/item:text-[#e6e8ec] group-hover/item:translate-x-[4px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">JavaScript, React, Next.js, Tailwind</span>
+              </li>
+              <li className="flex items-start gap-[14px] group/item cursor-default">
+                <span className="text-[#2a3547] font-mono text-[14px] mt-[1px] group-hover/item:text-[#8ba6cc] group-hover/item:-translate-y-[2px] group-hover/item:translate-x-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">↳</span>
+                <span className="text-[15px] leading-[1.6] text-[#a0a5b0] group-hover/item:text-[#e6e8ec] group-hover/item:translate-x-[4px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">Laravel, PHP, Solidity</span>
+              </li>
+            </ul>
           </div>
-          <div>
-            <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#8ba6cc] mb-[16px] pb-[8px] border-b border-[#2a3547]">
+          
+          {/* Data */}
+          <div className="group relative">
+            <div className="font-mono text-[12px] font-medium tracking-[0.12em] uppercase text-[#5f6572] mb-[22px] pb-[14px] border-b border-[#17191d] group-hover:text-[#8ba6cc] group-hover:border-[#2a3547] transition-colors duration-500">
               Data &amp; Infrastructure
             </div>
-            <div className="flex flex-col gap-[12px] text-[15px] text-[#b0b5bf]">
-              <span>PostgreSQL · Oracle · MS SQL</span>
-              <span>Redis · Nginx</span>
-              <span>Linux (server &amp; hardening)</span>
-              <span>Git · CI workflows</span>
-            </div>
+            <ul className="flex flex-col gap-[16px]">
+              <li className="flex items-start gap-[14px] group/item cursor-default">
+                <span className="text-[#2a3547] font-mono text-[14px] mt-[1px] group-hover/item:text-[#8ba6cc] group-hover/item:-translate-y-[2px] group-hover/item:translate-x-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">↳</span>
+                <span className="text-[15px] leading-[1.6] text-[#a0a5b0] group-hover/item:text-[#e6e8ec] group-hover/item:translate-x-[4px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">PostgreSQL, Oracle, MS SQL</span>
+              </li>
+              <li className="flex items-start gap-[14px] group/item cursor-default">
+                <span className="text-[#2a3547] font-mono text-[14px] mt-[1px] group-hover/item:text-[#8ba6cc] group-hover/item:-translate-y-[2px] group-hover/item:translate-x-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">↳</span>
+                <span className="text-[15px] leading-[1.6] text-[#a0a5b0] group-hover/item:text-[#e6e8ec] group-hover/item:translate-x-[4px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">Redis, Nginx, RabbitMQ</span>
+              </li>
+              <li className="flex items-start gap-[14px] group/item cursor-default">
+                <span className="text-[#2a3547] font-mono text-[14px] mt-[1px] group-hover/item:text-[#8ba6cc] group-hover/item:-translate-y-[2px] group-hover/item:translate-x-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">↳</span>
+                <span className="text-[15px] leading-[1.6] text-[#a0a5b0] group-hover/item:text-[#e6e8ec] group-hover/item:translate-x-[4px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">Linux server hardening, Git, CI/CD</span>
+              </li>
+            </ul>
           </div>
-          <div>
-            <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#8ba6cc] mb-[16px] pb-[8px] border-b border-[#2a3547]">
+
+          {/* Security */}
+          <div className="group relative">
+            <div className="font-mono text-[12px] font-medium tracking-[0.12em] uppercase text-[#5f6572] mb-[22px] pb-[14px] border-b border-[#17191d] group-hover:text-[#8ba6cc] group-hover:border-[#2a3547] transition-colors duration-500">
               Security
             </div>
-            <div className="flex flex-col gap-[12px] text-[15px] text-[#b0b5bf]">
-              <span>System &amp; network security</span>
-              <span>Web app security (OWASP)</span>
-              <span>Pen testing · Threat modeling</span>
-              <span>Burp · Nmap · Wireshark</span>
-            </div>
+            <ul className="flex flex-col gap-[16px]">
+              <li className="flex items-start gap-[14px] group/item cursor-default">
+                <span className="text-[#2a3547] font-mono text-[14px] mt-[1px] group-hover/item:text-[#8ba6cc] group-hover/item:-translate-y-[2px] group-hover/item:translate-x-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">↳</span>
+                <span className="text-[15px] leading-[1.6] text-[#a0a5b0] group-hover/item:text-[#e6e8ec] group-hover/item:translate-x-[4px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">System &amp; network security</span>
+              </li>
+              <li className="flex items-start gap-[14px] group/item cursor-default">
+                <span className="text-[#2a3547] font-mono text-[14px] mt-[1px] group-hover/item:text-[#8ba6cc] group-hover/item:-translate-y-[2px] group-hover/item:translate-x-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">↳</span>
+                <span className="text-[15px] leading-[1.6] text-[#a0a5b0] group-hover/item:text-[#e6e8ec] group-hover/item:translate-x-[4px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">Web app security (OWASP Top 10)</span>
+              </li>
+              <li className="flex items-start gap-[14px] group/item cursor-default">
+                <span className="text-[#2a3547] font-mono text-[14px] mt-[1px] group-hover/item:text-[#8ba6cc] group-hover/item:-translate-y-[2px] group-hover/item:translate-x-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">↳</span>
+                <span className="text-[15px] leading-[1.6] text-[#a0a5b0] group-hover/item:text-[#e6e8ec] group-hover/item:translate-x-[4px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">Pen testing, Threat modeling</span>
+              </li>
+              <li className="flex items-start gap-[14px] group/item cursor-default">
+                <span className="text-[#2a3547] font-mono text-[14px] mt-[1px] group-hover/item:text-[#8ba6cc] group-hover/item:-translate-y-[2px] group-hover/item:translate-x-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">↳</span>
+                <span className="text-[15px] leading-[1.6] text-[#a0a5b0] group-hover/item:text-[#e6e8ec] group-hover/item:translate-x-[4px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">Burp Suite, Nmap, Wireshark</span>
+              </li>
+            </ul>
           </div>
-          <div>
-            <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#8ba6cc] mb-[16px] pb-[8px] border-b border-[#2a3547]">
+
+          {/* Leadership */}
+          <div className="group relative">
+            <div className="font-mono text-[12px] font-medium tracking-[0.12em] uppercase text-[#5f6572] mb-[22px] pb-[14px] border-b border-[#17191d] group-hover:text-[#8ba6cc] group-hover:border-[#2a3547] transition-colors duration-500">
               Leadership &amp; Workflow
             </div>
-            <div className="flex flex-col gap-[12px] text-[15px] text-[#b0b5bf]">
-              <span>Technical architecture ownership</span>
-              <span>Cross-functional communication</span>
-              <span>Vendor &amp; stakeholder management</span>
-              <span>Agile product delivery</span>
-            </div>
+            <ul className="flex flex-col gap-[16px]">
+              <li className="flex items-start gap-[14px] group/item cursor-default">
+                <span className="text-[#2a3547] font-mono text-[14px] mt-[1px] group-hover/item:text-[#8ba6cc] group-hover/item:-translate-y-[2px] group-hover/item:translate-x-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">↳</span>
+                <span className="text-[15px] leading-[1.6] text-[#a0a5b0] group-hover/item:text-[#e6e8ec] group-hover/item:translate-x-[4px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">Technical architecture ownership</span>
+              </li>
+              <li className="flex items-start gap-[14px] group/item cursor-default">
+                <span className="text-[#2a3547] font-mono text-[14px] mt-[1px] group-hover/item:text-[#8ba6cc] group-hover/item:-translate-y-[2px] group-hover/item:translate-x-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">↳</span>
+                <span className="text-[15px] leading-[1.6] text-[#a0a5b0] group-hover/item:text-[#e6e8ec] group-hover/item:translate-x-[4px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">Cross-functional communication</span>
+              </li>
+              <li className="flex items-start gap-[14px] group/item cursor-default">
+                <span className="text-[#2a3547] font-mono text-[14px] mt-[1px] group-hover/item:text-[#8ba6cc] group-hover/item:-translate-y-[2px] group-hover/item:translate-x-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">↳</span>
+                <span className="text-[15px] leading-[1.6] text-[#a0a5b0] group-hover/item:text-[#e6e8ec] group-hover/item:translate-x-[4px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">Vendor &amp; stakeholder management</span>
+              </li>
+              <li className="flex items-start gap-[14px] group/item cursor-default">
+                <span className="text-[#2a3547] font-mono text-[14px] mt-[1px] group-hover/item:text-[#8ba6cc] group-hover/item:-translate-y-[2px] group-hover/item:translate-x-[2px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">↳</span>
+                <span className="text-[15px] leading-[1.6] text-[#a0a5b0] group-hover/item:text-[#e6e8ec] group-hover/item:translate-x-[4px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">Agile product delivery</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

@@ -46,21 +46,21 @@ export default function Hero() {
 
       {/* Right Column */}
       <div className="flex flex-col">
-        <div className="px-[36px] py-[26px] border-b border-[#17191d]">
-          <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#5f6572] mb-[8px]">Location</div>
-          <div className="text-[16px] text-[#e6e8ec]">Berlin, Germany</div>
+        <div className="group px-[36px] py-[28px] border-b border-[#17191d] hover:bg-[rgba(255,255,255,0.02)] transition-colors duration-300">
+          <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#5f6572] mb-[8px] group-hover:text-[#8ba6cc] transition-colors duration-300">Location</div>
+          <div className="text-[16px] text-[#e6e8ec] font-medium">Berlin, Germany</div>
         </div>
-        <div className="px-[36px] py-[26px] border-b border-[#17191d]">
-          <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#5f6572] mb-[8px]">Studying</div>
-          <div className="text-[16px] text-[#e6e8ec]">EMJM, Applied Cybersecurity (CyberMACS)</div>
+        <div className="group px-[36px] py-[28px] border-b border-[#17191d] hover:bg-[rgba(255,255,255,0.02)] transition-colors duration-300">
+          <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#5f6572] mb-[8px] group-hover:text-[#8ba6cc] transition-colors duration-300">Studying</div>
+          <div className="text-[16px] text-[#e6e8ec] font-medium">EMJM, Applied Cybersecurity (CyberMACS)</div>
         </div>
-        <div className="px-[36px] py-[26px] border-b border-[#17191d]">
-          <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#5f6572] mb-[8px]">Focus</div>
-          <div className="text-[16px] text-[#e6e8ec]">System Design &amp; Offensive Security</div>
+        <div className="group px-[36px] py-[28px] border-b border-[#17191d] hover:bg-[rgba(255,255,255,0.02)] transition-colors duration-300">
+          <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#5f6572] mb-[8px] group-hover:text-[#8ba6cc] transition-colors duration-300">Focus</div>
+          <div className="text-[16px] text-[#e6e8ec] font-medium">System Design &amp; Offensive Security</div>
         </div>
-        <div className="px-[36px] py-[26px] border-b border-[#17191d]">
+        <div className="group px-[36px] py-[28px] border-b border-[#17191d] hover:bg-[rgba(139,166,204,0.02)] transition-colors duration-300">
           <div className="flex items-center gap-[9px] mb-[10px]">
-            <span className="w-[7px] h-[7px] rounded-full bg-[#8ba6cc] shadow-[0_0_0_4px_rgba(139,166,204,0.16)]"></span>
+            <span className="w-[7px] h-[7px] rounded-full bg-[#8ba6cc] shadow-[0_0_0_4px_rgba(139,166,204,0.16)] group-hover:shadow-[0_0_0_6px_rgba(139,166,204,0.25)] transition-shadow duration-300"></span>
             <span className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#8ba6cc]">Currently learning</span>
           </div>
           <div className="font-display text-[17px] font-semibold text-[#e6e8ec] leading-[1.3] mb-[6px]">
@@ -70,19 +70,26 @@ export default function Hero() {
             Memory-safe services and low-level systems — pairing performance with security by design.
           </div>
         </div>
-        <div className="px-[36px] py-[26px] flex-1 bg-[rgba(16,185,129,0.03)]">
-          <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#5f6572] mb-[12px]">Availability</div>
-          <div className="inline-flex items-center gap-[8px] bg-[#10b981]/10 border border-[#10b981]/20 px-[12px] py-[6px] rounded-full">
-            <span className="relative flex h-[8px] w-[8px]">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10b981] opacity-60"></span>
-              <span className="relative inline-flex rounded-full h-[8px] w-[8px] bg-[#10b981] shadow-[0_0_8px_rgba(16,185,129,0.4)]"></span>
-            </span>
-            <span className="font-mono text-[11.5px] font-semibold tracking-[0.05em] uppercase text-[#10b981]">
-              Open for work
-            </span>
-          </div>
-          <div className="text-[13.5px] text-[#8a909c] mt-[12px] leading-[1.5]">
-            Targeting backend, systems, and security engineering roles.
+        <div className="group relative px-[36px] py-[32px] flex-1 overflow-hidden bg-[rgba(16,185,129,0.015)] transition-all duration-500 border-t border-[#17191d] lg:border-none">
+          {/* Animated Background Glow */}
+          <div className="absolute top-0 right-0 w-[250px] h-[250px] bg-[#10b981] opacity-0 group-hover:opacity-[0.08] rounded-full blur-[60px] translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-out"></div>
+          
+          <div className="relative z-10 flex flex-col h-full justify-center">
+            <div className="flex items-center gap-[12px] mb-[12px]">
+              <div className="relative flex h-[10px] w-[10px]">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10b981] opacity-70"></span>
+                <span className="relative inline-flex rounded-full h-[10px] w-[10px] bg-[#10b981] shadow-[0_0_12px_rgba(16,185,129,0.8)]"></span>
+              </div>
+              <div className="font-mono text-[11px] tracking-[0.15em] uppercase text-[#10b981] font-semibold">
+                Available Now
+              </div>
+            </div>
+            <div className="font-display text-[18px] font-semibold text-[#e6e8ec] leading-[1.3] mb-[8px] group-hover:text-white transition-colors duration-300">
+              Open for opportunities
+            </div>
+            <div className="text-[13.5px] text-[#8a909c] leading-[1.6] group-hover:text-[#b0b5bf] transition-colors duration-300">
+              Targeting roles in backend engineering, distributed systems, and offensive security.
+            </div>
           </div>
         </div>
       </div>
