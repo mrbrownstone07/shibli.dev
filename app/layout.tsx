@@ -5,7 +5,7 @@ import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "Mahdi Shibli — Backend Engineer",
+  title: "Mahdi Shibli | Backend Engineer",
   description:
     "Software engineer and solution analyst with years spent building backend, financial, and web systems.",
 };

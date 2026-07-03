@@ -17,10 +17,10 @@ export default function Hero() {
           Mahdi Mohammad<br />Shibli
         </h1>
         <p className="text-[18px] leading-[1.65] text-[#b0b5bf] m-0 mb-[16px] max-w-[600px]">
-          Software engineer and solution analyst with years spent building backend, financial, and web systems — now deepening that work in applied cybersecurity, system security, and penetration testing.
+          Software engineer and solution analyst with years spent building backend, financial, and web systems - now deepening that work in applied cybersecurity, system security, and penetration testing.
         </p>
         <p className="text-[15px] leading-[1.7] text-[#8a909c] m-0 mb-[36px] max-w-[600px]">
-          I design systems to be reliable and secure by default — and test them like an attacker.
+          I design systems to be reliable and secure by default - and test them like an attacker.
         </p>
         
         <div className="flex items-center gap-[12px] flex-wrap">
@@ -67,7 +67,7 @@ export default function Hero() {
             Rust for backend &amp; systems programming
           </div>
           <div className="text-[13.5px] text-[#8a909c] leading-[1.55]">
-            Memory-safe services and low-level systems — pairing performance with security by design.
+            Memory-safe services and low-level systems - pairing performance with security by design.
           </div>
         </div>
         <div className="group relative px-[36px] py-[32px] flex-1 overflow-hidden bg-[rgba(16,185,129,0.015)] transition-all duration-500 border-t border-[#17191d] lg:border-none">

@@ -10,7 +10,7 @@ export default function Education() {
     {
       degree: "MSc in Cybersecurity",
       school: "SRH Berlin University",
-      date: "2026 — 2027 · Berlin",
+      date: "2026 - 2027 · Berlin",
       status: "In progress",
       description: "Year two mobility of the Erasmus Mundus Joint Master (CyberMACS), focusing on advanced offensive techniques, secure system architecture, and European regulatory compliance.",
       tags: ["Offensive Security", "System Architecture", "Compliance"],
@@ -18,7 +18,7 @@ export default function Education() {
     {
       degree: "MSc in Cybersecurity",
       school: "Kadir Has University",
-      date: "2025 — 2026 · Istanbul",
+      date: "2025 - 2026 · Istanbul",
       status: "",
       description: "Year one mobility of EMJM CyberMACS. Intensive coursework covering System Security, Penetration Testing, Applied Cryptography, and Time Series Analysis for threat detection.",
       tags: ["Penetration Testing", "Applied Cryptography", "Threat Detection"],
@@ -34,7 +34,7 @@ export default function Education() {
     {
       degree: "BSc in Computer Science",
       school: "North South University",
-      date: "2017 — 2021 · Dhaka",
+      date: "2017 - 2021 · Dhaka",
       status: "",
       description: "Undergraduate foundation in software engineering, algorithms, and distributed systems. Active member of the NSU Problem Solving Club.",
       tags: ["Software Engineering", "Algorithms", "Databases"],

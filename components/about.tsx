@@ -31,7 +31,7 @@ export default function About() {
         </p>
 
         <p className="m-0">
-          My work has spanned from migrating core payment gateways to the 3DS2 standard, to engineering hardware-integrated payment prototypes. I specialize in the technical ownership of a product's lifecycle—from the initial API handshake and merchant onboarding to production deployment and monitoring.
+          My work has spanned from migrating core payment gateways to the 3DS2 standard, to engineering hardware-integrated payment prototypes. I specialize in the technical ownership of a product's lifecycle - from the initial API handshake and merchant onboarding to production deployment and monitoring.
         </p>
 
         <p className="m-0">

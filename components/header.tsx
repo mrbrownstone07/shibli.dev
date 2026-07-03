@@ -15,7 +15,7 @@ export default function Header() {
     <header className="sticky top-0 z-[999] w-full border-b border-[#17191d] bg-[#0a0b0d]/80 backdrop-blur-md">
       <nav className="px-[44px] h-[72px] flex items-center justify-between">
         <Link href="#home" className="font-display text-[20px] font-bold tracking-[-0.02em] text-[#e6e8ec] hover:text-[#8ba6cc] transition-colors">
-          MS.
+          mrbrownstone.
         </Link>
         <ul className="flex items-center gap-[32px] font-mono text-[12px] uppercase tracking-[0.1em] text-[#8a909c]">
           {links.map((link) => (
