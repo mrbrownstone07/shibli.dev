@@ -1,44 +1,43 @@
 "use client";
 
 import React from "react";
-import { useActiveSectionContext } from "@/context/active-section-context";
+import { motion } from "framer-motion";
 import { links } from "@/lib/data";
+import Link from "next/link";
+import clsx from "clsx";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Header() {
-  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
 
   return (
-    <header
-      id="home-nav"
-      className="sticky top-0 z-20 flex items-center justify-between px-[44px] py-[22px] border-b border-[#17191d] bg-[rgba(10,11,13,0.82)] backdrop-blur-[12px]"
-    >
-      <a
-        href="#home"
-        className="font-display text-[18px] font-semibold tracking-[0.02em] text-[#e6e8ec]"
-        onClick={() => {
-          setActiveSection("Home");
-          setTimeOfLastClick(Date.now());
-        }}
-      >
-        MS<span className="text-[#8ba6cc]">.</span>
-      </a>
-      
-      <nav className="hidden md:flex gap-[26px] text-[12.5px] font-medium uppercase tracking-[0.06em]">
-        {links.slice(1).map((link) => (
-          <a
-            key={link.hash}
-            href={link.hash}
-            className={`transition-colors duration-200 ${
-              activeSection === link.name ? "text-[#e6e8ec]" : "text-[#8a909c] hover:text-[#e6e8ec]"
-            }`}
-            onClick={() => {
-              setActiveSection(link.name);
-              setTimeOfLastClick(Date.now());
-            }}
-          >
-            {link.name}
-          </a>
-        ))}
+    <header className="sticky top-0 z-[999] w-full border-b border-[#17191d] bg-[#0a0b0d]/80 backdrop-blur-md">
+      <nav className="px-[44px] h-[72px] flex items-center justify-between">
+        <Link href="#home" className="font-display text-[20px] font-bold tracking-[-0.02em] text-[#e6e8ec] hover:text-[#8ba6cc] transition-colors">
+          MS.
+        </Link>
+        <ul className="flex items-center gap-[32px] font-mono text-[12px] uppercase tracking-[0.1em] text-[#8a909c]">
+          {links.map((link) => (
+            <li key={link.hash} className="relative">
+              <Link
+                href={link.hash}
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
+                }}
+                className={clsx(
+                  "hover:text-[#e6e8ec] transition-colors py-[8px]",
+                  {
+                    "text-[#8ba6cc]": activeSection === link.name,
+                  }
+                )}
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </nav>
     </header>
   );

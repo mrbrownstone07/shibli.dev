@@ -23,17 +23,23 @@ export default function Hero() {
           I design systems to be reliable and secure by default — and test them like an attacker.
         </p>
         
-        <div className="flex items-center gap-[14px] flex-wrap">
+        <div className="flex items-center gap-[12px] flex-wrap">
           <a
             href="#contact"
-            className="font-semibold text-[15px] text-[#0a0f18] bg-[#8ba6cc] px-[24px] py-[13px] rounded-[8px] hover:bg-[#a5bcda] transition-colors"
+            className="flex items-center justify-center h-[44px] px-[24px] rounded-full bg-[#8ba6cc] text-[#0a0f18] font-medium text-[14.5px] hover:bg-[#a5bcda] transition-colors"
           >
-            Start a conversation →
+            Start a conversation
           </a>
-          <div className="flex gap-[10px] font-mono text-[12px] tracking-[0.04em] uppercase text-[#8a909c]">
-            <a href="https://linkedin.com/in/mahdimshibli" target="_blank" rel="noopener noreferrer" className="border border-[#262932] px-[14px] py-[10px] rounded-[8px] transition-colors hover:text-[#e6e8ec] hover:border-[#3a4150]">LinkedIn</a>
-            <a href="https://github.com/mrbrownstone07" target="_blank" rel="noopener noreferrer" className="border border-[#262932] px-[14px] py-[10px] rounded-[8px] transition-colors hover:text-[#e6e8ec] hover:border-[#3a4150]">GitHub</a>
-            <a href="#" className="border border-[#262932] px-[14px] py-[10px] rounded-[8px] transition-colors hover:text-[#e6e8ec] hover:border-[#3a4150]">HTB</a>
+          <div className="flex gap-[12px]">
+            <a href="https://linkedin.com/in/mahdimshibli" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-[44px] px-[20px] rounded-full border border-[#2a3547] text-[#8a909c] font-medium text-[14px] hover:text-[#e6e8ec] hover:border-[#5f6572] transition-colors">
+              LinkedIn
+            </a>
+            <a href="https://github.com/mrbrownstone07" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-[44px] px-[20px] rounded-full border border-[#2a3547] text-[#8a909c] font-medium text-[14px] hover:text-[#e6e8ec] hover:border-[#5f6572] transition-colors">
+              GitHub
+            </a>
+            <a href="#" className="flex items-center justify-center h-[44px] px-[20px] rounded-full border border-[#2a3547] text-[#8a909c] font-medium text-[14px] hover:text-[#e6e8ec] hover:border-[#5f6572] transition-colors">
+              HTB
+            </a>
           </div>
         </div>
       </div>
@@ -53,10 +59,6 @@ export default function Hero() {
           <div className="text-[16px] text-[#e6e8ec]">System Design &amp; Offensive Security</div>
         </div>
         <div className="px-[36px] py-[26px] border-b border-[#17191d]">
-          <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#5f6572] mb-[8px]">Status</div>
-          <div className="text-[16px] text-[#8ba6cc]">Open to: security roles | Backend &amp; systems programming</div>
-        </div>
-        <div className="px-[36px] py-[26px] flex-1 bg-[rgba(139,166,204,0.05)]">
           <div className="flex items-center gap-[9px] mb-[10px]">
             <span className="w-[7px] h-[7px] rounded-full bg-[#8ba6cc] shadow-[0_0_0_4px_rgba(139,166,204,0.16)]"></span>
             <span className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#8ba6cc]">Currently learning</span>
@@ -66,6 +68,21 @@ export default function Hero() {
           </div>
           <div className="text-[13.5px] text-[#8a909c] leading-[1.55]">
             Memory-safe services and low-level systems — pairing performance with security by design.
+          </div>
+        </div>
+        <div className="px-[36px] py-[26px] flex-1 bg-[rgba(16,185,129,0.03)]">
+          <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#5f6572] mb-[12px]">Availability</div>
+          <div className="inline-flex items-center gap-[8px] bg-[#10b981]/10 border border-[#10b981]/20 px-[12px] py-[6px] rounded-full">
+            <span className="relative flex h-[8px] w-[8px]">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10b981] opacity-60"></span>
+              <span className="relative inline-flex rounded-full h-[8px] w-[8px] bg-[#10b981] shadow-[0_0_8px_rgba(16,185,129,0.4)]"></span>
+            </span>
+            <span className="font-mono text-[11.5px] font-semibold tracking-[0.05em] uppercase text-[#10b981]">
+              Open for work
+            </span>
+          </div>
+          <div className="text-[13.5px] text-[#8a909c] mt-[12px] leading-[1.5]">
+            Targeting backend, systems, and security engineering roles.
           </div>
         </div>
       </div>
