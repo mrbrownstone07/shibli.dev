@@ -2,23 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
 html {
-  --line-color: rgba(0, 255, 65, 0.2);
+  scroll-behavior: smooth;
 }
 
-html.dark {
-  --line-color: rgba(0, 255, 65, 0.2);
-}
-
-.borderBlack {
-  @apply border border-cyber-border;
+::selection {
+  background: rgba(139, 166, 204, 0.22);
 }
 
 body {
-  background-color: #0a0a0a !important; /* Force dark bg */
-  color: #f3f4f6 !important;
-  background-image:
-    linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px) !important;
-  background-size: 30px 30px !important;
+  background-color: #0a0b0d;
+  color: #e6e8ec;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0b0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #23262d;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a4150;
 }

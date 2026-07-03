@@ -8,15 +8,40 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "cyber-bg": "#0a0a0a",
-        "cyber-card": "#111111",
-        "cyber-accent": "#00ff41",
-        "cyber-border": "#333333",
+        bg: {
+          primary: '#0a0b0d',
+          secondary: '#111215',
+          card: '#16181c',
+        },
+        accent: {
+          DEFAULT: '#8ba6cc',
+          hover: '#a5bcda',
+          dim: 'rgba(139,166,204,0.04)',
+        },
+        txt: {
+          primary: '#e6e8ec',
+          secondary: '#b0b5bf',
+          muted: '#8a909c',
+          dim: '#5f6572',
+          vdim: '#4f545e',
+        },
+        border: {
+          DEFAULT: '#17191d',
+          tag: '#23262d',
+          btn: '#262932',
+          'btn-hover': '#3a4150',
+        },
+        section: {
+          number: '#20242b',
+        },
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        display: ['Space Grotesk', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+        body: ['Inter', 'sans-serif'],
+      },
+      maxWidth: {
+        'site': '1180px',
       },
     },
   },

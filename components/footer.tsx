@@ -2,10 +2,15 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="mb-10 px-4 text-center text-gray-500">
-      <small className="mb-2 block text-xs">
-        &copy; 2024 mrbrownstone. All rights reserved.
-      </small>
+    <footer className="border-x border-t border-border max-w-site mx-auto">
+      <div className="px-6 md:px-10 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p className="font-mono text-[12px] text-txt-vdim">
+          © {new Date().getFullYear()} Mahdi Mohammad Shibli
+        </p>
+        <p className="font-mono text-[12px] text-txt-vdim">
+          Built with Next.js & Tailwind
+        </p>
+      </div>
     </footer>
   );
 }

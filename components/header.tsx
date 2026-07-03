@@ -1,64 +1,44 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { links } from "@/lib/data";
-import Link from "next/link";
-import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { links } from "@/lib/data";
 
 export default function Header() {
-  const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
-    <header className="z-[999] relative">
-      <motion.div
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-emerald-400/20 bg-[#0a0a0a]/90 shadow-[0_4px_30px_rgba(0,255,65,0.08)] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full"
-        initial={{ y: -100, x: "-50%", opacity: 0 }}
-        animate={{ y: 0, x: "-50%", opacity: 1 }}
-      ></motion.div>
-
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-4 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-slate-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
-          {links.map((link) => (
-            <motion.li
-              className="h-3/4 flex items-center justify-center relative"
-              key={link.hash}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <Link
-                className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-emerald-300 transition",
-                  {
-                    "text-emerald-300":
-                      activeSection === link.name,
-                  }
-                )}
-                href={link.hash}
-                onClick={() => {
-                  setActiveSection(link.name);
-                  setTimeOfLastClick(Date.now());
-                }}
-              >
-                {link.name}
-
-                {link.name === activeSection && (
-                  <motion.span
-                    className="bg-emerald-500/10 border border-emerald-400/20 rounded-full absolute inset-0 -z-10"
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
-                    }}
-                  ></motion.span>
-                )}
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
+    <header
+      id="home-nav"
+      className="sticky top-0 z-20 flex items-center justify-between px-[44px] py-[22px] border-b border-[#17191d] bg-[rgba(10,11,13,0.82)] backdrop-blur-[12px]"
+    >
+      <a
+        href="#home"
+        className="font-display text-[18px] font-semibold tracking-[0.02em] text-[#e6e8ec]"
+        onClick={() => {
+          setActiveSection("Home");
+          setTimeOfLastClick(Date.now());
+        }}
+      >
+        MS<span className="text-[#8ba6cc]">.</span>
+      </a>
+      
+      <nav className="hidden md:flex gap-[26px] text-[12.5px] font-medium uppercase tracking-[0.06em]">
+        {links.slice(1).map((link) => (
+          <a
+            key={link.hash}
+            href={link.hash}
+            className={`transition-colors duration-200 ${
+              activeSection === link.name ? "text-[#e6e8ec]" : "text-[#8a909c] hover:text-[#e6e8ec]"
+            }`}
+            onClick={() => {
+              setActiveSection(link.name);
+              setTimeOfLastClick(Date.now());
+            }}
+          >
+            {link.name}
+          </a>
+        ))}
       </nav>
     </header>
   );

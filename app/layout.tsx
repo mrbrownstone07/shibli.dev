@@ -1,16 +1,13 @@
-import Header from "@/components/header";
+import type { Metadata } from "next";
 import "./globals.css";
-import { Lato } from "next/font/google";
+import Header from "@/components/header";
 import ActiveSectionContextProvider from "@/context/active-section-context";
-import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
 
-const inter = Lato({ subsets: ["latin"], weight: "400" });
-
-export const metadata = {
-  title: "Mahdi Shibli | Applied Cybersecurity & Systems Security",
+export const metadata: Metadata = {
+  title: "Mahdi Shibli — Backend Engineer",
   description:
-    "Mahdi Shibli is a software engineer and solution analyst pivoting into applied cybersecurity, focusing on system security and penetration testing.",
+    "Software engineer and solution analyst with years spent building backend, financial, and web systems.",
 };
 
 export default function RootLayout({
@@ -19,18 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth dark">
-      <body
-        className={`${inter.className} bg-cyber-bg text-gray-50 relative pt-28 sm:pt-36 dark:bg-cyber-bg dark:text-gray-50 dark:text-opacity-90`}
-      >
-
-
+    <html lang="en" className="scroll-smooth">
+      <body className="m-0 bg-[#0a0b0d] text-[#e6e8ec] font-body min-h-screen">
         <ActiveSectionContextProvider>
-          <Header />
-          {children}
-          <Footer />
-
-          <Toaster position="top-right" />
+          <div className="max-w-[1180px] mx-auto border-x border-[#17191d]">
+            <Header />
+            {children}
+          </div>
+          <Toaster position="bottom-right" />
         </ActiveSectionContextProvider>
       </body>
     </html>

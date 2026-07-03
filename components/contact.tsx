@@ -1,74 +1,47 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-// import { sendEmail } from "@/actions/sendEmail";
-// import SubmitBtn from "./submit-btn";
-// import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
 
   return (
-    <motion.section
-      id="contact"
+    <div
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
+      id="contact"
+      className="px-[44px] py-[76px] grid grid-cols-1 md:grid-cols-[0.35fr_1.65fr] gap-[40px]"
+      style={{ scrollMarginTop: "74px" }}
     >
-      <SectionHeading>Contact me</SectionHeading>
-
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
-        For opportunities, collaborations, or just to talk about systems
-        security and penetration testing, reach me directly at{" "}
-        <a className="underline" href="mailto:mahdi.mshibli@gmail.com">
+      <div>
+        <div className="font-display text-[44px] font-bold text-[#20242b] leading-[1]">
+          06
+        </div>
+        <div className="font-mono text-[12px] tracking-[0.14em] uppercase text-[#8ba6cc] mt-[8px]">
+          Contact
+        </div>
+      </div>
+      <div>
+        <h2 className="font-display font-semibold text-[42px] tracking-[-0.02em] m-0 mb-[20px] leading-[1.1] max-w-[640px] text-[#e6e8ec]">
+          Let's talk about building systems that hold up under pressure.
+        </h2>
+        <a
+          href="mailto:mahdi.mshibli@gmail.com"
+          className="text-[20px] text-[#8ba6cc] border-b border-[#2a3547] pb-[4px] transition-colors duration-200 hover:text-[#a5bcda] hover:border-[#8ba6cc]"
+        >
           mahdi.mshibli@gmail.com
-        </a>{" "}
-      </p>
-
-      {/* <form
-        className="mt-10 flex flex-col dark:text-black"
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
-
-          if (error) {
-            toast.error(error);
-            return;
-          }
-
-          toast.success("Email sent successfully!");
-        }}
-      >
-        <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-          name="senderEmail"
-          type="email"
-          required
-          maxLength={500}
-          placeholder="Your email"
-        />
-        <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-          name="message"
-          placeholder="Your message"
-          required
-          maxLength={5000}
-        />
-        <SubmitBtn />
-      </form> */}
-    </motion.section>
+        </a>
+        
+        <div className="mt-[40px] flex gap-[20px] font-mono text-[12px] tracking-[0.06em] uppercase text-[#8a909c]">
+          <a href="https://linkedin.com/in/mahdimshibli" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#e6e8ec]">LinkedIn</a>
+          <a href="https://github.com/mrbrownstone07" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#e6e8ec]">GitHub</a>
+          <a href="#" className="transition-colors hover:text-[#e6e8ec]">Hack The Box</a>
+        </div>
+        
+        <div className="mt-[36px] font-mono text-[12px] text-[#4f545e]">
+          © {new Date().getFullYear()} Mahdi Mohammad Shibli
+        </div>
+      </div>
+    </div>
   );
 }

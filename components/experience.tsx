@@ -1,53 +1,100 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
+
 export default function Experience() {
-  const { ref } = useSectionInView("Experience");
+  const { ref } = useSectionInView("Experience", 0.3);
+
+  const experiences = [
+    {
+      title: "Research Assistant",
+      company: "Kadir Has University",
+      date: "2026 — Present · Istanbul",
+      description: "Designed manifold-learning-based differential privacy mechanisms for cloud ML pipelines, balancing data privacy with model utility to secure high-dimensional datasets.",
+      tags: ["Differential Privacy", "Cloud ML", "Security Research"],
+    },
+    {
+      title: "Technical Co-Founder",
+      company: "monitowl",
+      date: "2025 — Present · Remote",
+      description: "Engineered a multi-tenant supply-chain SaaS from scratch, implementing a real-time ingestion layer and an ABAC authorization system to provide compliance-grade visibility for regulated industries.",
+      tags: ["SaaS Architecture", "Real-time Systems", "ABAC"],
+    },
+    {
+      title: "Solution Analyst",
+      company: "Nagad",
+      date: "2024 — 2025 · Dhaka",
+      description: "Architected API flows for Bangladesh's largest MFS platform and led R&D on a palm-scan payment prototype, establishing scalable system blueprints that bridged compliance and engineering.",
+      tags: ["Payment Systems", "System Architecture", "R&D"],
+    },
+    {
+      title: "Associate Manager",
+      company: "BRAC Bank PLC",
+      date: "2022 — 2024 · Dhaka",
+      description: "Built a Django-based automation platform cutting 200+ manual hours monthly and led core payment-acquiring integrations (VISA, Mastercard, Bangla-QR) into the bank's proprietary gateway.",
+      tags: ["Django", "Payment Gateways", "Automation"],
+    },
+    {
+      title: "Software Engineer",
+      company: "Khan Soft Limited",
+      date: "2021 — 2022 · Dhaka",
+      description: "Developed a secure crypto payment gateway and custom blockchain data pipelines (Ethereum, Bitcoin) using Django REST and RabbitMQ, enabling seamless ERC-20 transactions for a German client.",
+      tags: ["Django REST", "Blockchain", "Data Pipelines"],
+    }
+  ];
 
   return (
-    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
-      <SectionHeading>Experience & education</SectionHeading>
-      <VerticalTimeline lineColor="">
-        {experiencesData.map((item, index) => (
-          <React.Fragment key={index}>
-            <VerticalTimelineElement
-              contentStyle={{
-                background: "#111111",
-                boxShadow: "0 0 15px rgba(0, 255, 65, 0.15)",
-                border: "1px solid rgba(0, 255, 65, 0.3)",
-                textAlign: "left",
-                padding: "1.3rem 2rem",
-              }}
-              contentArrowStyle={{
-                borderRight: "0.4rem solid rgba(0, 255, 65, 0.3)",
-              }}
-              date={item.date}
-              icon={item.icon}
-              iconStyle={{
-                background: "#0a0a0a",
-                border: "1px solid rgba(0, 255, 65, 0.5)",
-                boxShadow: "0 0 10px rgba(0, 255, 65, 0.2)",
-                color: "#00ff41",
-                fontSize: "1.5rem",
-              }}
-            >
-              <h3 className="font-semibold capitalize text-emerald-300">{item.title}</h3>
-              <p className="font-normal !mt-0 text-slate-300">{item.location}</p>
-              <p className="!mt-1 !font-normal text-slate-400">
-                {item.description}
-              </p>
-            </VerticalTimelineElement>
-          </React.Fragment>
+    <div
+      ref={ref}
+      id="experience"
+      className="px-[44px] py-[56px] border-b border-[#17191d]"
+      style={{ scrollMarginTop: "74px" }}
+    >
+      <div className="grid grid-cols-1 md:grid-cols-[0.35fr_1.65fr] gap-[40px] mb-[36px]">
+        <div>
+          <div className="font-display text-[44px] font-bold text-[#20242b] leading-[1]">
+            04
+          </div>
+          <div className="font-mono text-[12px] tracking-[0.14em] uppercase text-[#8ba6cc] mt-[8px]">
+            Experience
+          </div>
+        </div>
+        <h2 className="font-display font-semibold text-[34px] m-0 tracking-[-0.02em] self-center text-[#e6e8ec]">
+          Professional career
+        </h2>
+      </div>
+
+      <div className="relative pl-[36px]">
+        <div className="absolute left-[5px] top-[7px] bottom-[9px] w-[1px] bg-gradient-to-b from-[#8ba6cc55] to-[#20242b]"></div>
+        
+        {experiences.map((exp, i) => (
+          <div key={i} className={`relative ${i !== experiences.length - 1 ? 'pb-[38px]' : ''}`}>
+            <div className="absolute left-[-36px] top-[5px] w-[11px] h-[11px] rounded-full bg-[#0a0b0d] border-[2px] border-[#8ba6cc]"></div>
+            
+            <div className="flex items-baseline justify-between gap-[20px] flex-wrap mb-[6px]">
+              <div className="font-display text-[20px] font-semibold text-[#e6e8ec]">
+                {exp.title} <span className="text-[#5f6572] font-normal">/</span> <span className="text-[#8ba6cc]">{exp.company}</span>
+              </div>
+              <div className="font-mono text-[12.5px] tracking-[0.06em] text-[#8a909c]">
+                {exp.date}
+              </div>
+            </div>
+            
+            <p className="m-0 mb-[14px] text-[15px] leading-[1.65] text-[#8a909c] max-w-[640px]">
+              {exp.description}
+            </p>
+            
+            <div className="flex flex-wrap gap-[7px] font-mono text-[11px] uppercase tracking-[0.05em]">
+              {exp.tags.map((tag, j) => (
+                <span key={j} className="text-[#9aa1ad] border border-[#23262d] px-[9px] py-[4px] rounded-[6px]">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
         ))}
-      </VerticalTimeline>
-    </section>
+      </div>
+    </div>
   );
 }

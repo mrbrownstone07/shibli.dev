@@ -1,52 +1,67 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
-import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { motion } from "framer-motion";
-
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
-  }),
-};
 
 export default function Skills() {
   const { ref } = useSectionInView("Skills");
 
   return (
-    <section
-      id="skills"
+    <div
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      id="skills"
+      className="px-[44px] py-[56px] border-b border-[#17191d]"
+      style={{ scrollMarginTop: "74px" }}
     >
-      <SectionHeading>Technical & security skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {skillsData.map((skill, index) => (
-          <motion.li
-            className="rounded-xl px-5 py-3 bg-slate-900 text-emerald-100 border border-emerald-400/30 shadow-[0_0_18px_rgba(16,185,129,0.25)] dark:bg-slate-900/80 dark:text-emerald-100"
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-          >
-            {skill}
-          </motion.li>
-        ))}
-      </ul>
-    </section>
+      <div className="grid grid-cols-1 md:grid-cols-[0.35fr_1.65fr] gap-[40px] mb-[36px]">
+        <div>
+          <div className="font-display text-[44px] font-bold text-[#20242b] leading-[1]">
+            03
+          </div>
+          <div className="font-mono text-[12px] tracking-[0.14em] uppercase text-[#8ba6cc] mt-[8px]">
+            Skills
+          </div>
+        </div>
+        <h2 className="font-display font-semibold text-[34px] m-0 tracking-[-0.02em] self-center text-[#e6e8ec]">
+          Capabilities
+        </h2>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 border border-[#17191d] rounded-[12px] overflow-hidden">
+        <div className="p-[28px] border-b md:border-b-0 md:border-r border-[#17191d]">
+          <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#8ba6cc] mb-[18px]">
+            Languages &amp; Frameworks
+          </div>
+          <div className="flex flex-col gap-[11px] text-[15px] color-[#b0b5bf]">
+            <span>Python · Django · DRF · FastAPI</span>
+            <span>Laravel · PHP</span>
+            <span>JavaScript · React · Next.js</span>
+            <span>Solidity · Tailwind</span>
+          </div>
+        </div>
+        <div className="p-[28px] border-b md:border-b-0 md:border-r border-[#17191d]">
+          <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#8ba6cc] mb-[18px]">
+            Data &amp; Infrastructure
+          </div>
+          <div className="flex flex-col gap-[11px] text-[15px] color-[#b0b5bf]">
+            <span>PostgreSQL · Oracle · MS SQL</span>
+            <span>Redis · Nginx</span>
+            <span>Linux (server &amp; hardening)</span>
+            <span>Git · CI workflows</span>
+          </div>
+        </div>
+        <div className="p-[28px] bg-[rgba(139,166,204,0.04)]">
+          <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#8ba6cc] mb-[18px]">
+            Security
+          </div>
+          <div className="flex flex-col gap-[11px] text-[15px] color-[#b0b5bf]">
+            <span>System &amp; network security</span>
+            <span>Web app security (OWASP)</span>
+            <span>Pen testing · Threat modeling</span>
+            <span>Burp · Nmap · Wireshark · Metasploit</span>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

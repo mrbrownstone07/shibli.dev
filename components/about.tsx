@@ -1,65 +1,51 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
   const { ref } = useSectionInView("About");
 
   return (
-    <motion.section
+    <div
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
       id="about"
+      className="px-[44px] py-[56px] grid grid-cols-1 md:grid-cols-[0.35fr_1.65fr] gap-[40px] border-b border-[#17191d]"
+      style={{ scrollMarginTop: "74px" }}
     >
-      <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Computer Science</span> from{" "}
-        <span className="font-medium">North South University</span>, I spent the
-        last few years building <span className="font-medium">backend systems</span>,{" "}
-        <span className="font-medium">financial solutions</span>, and{" "}
-        <span className="font-medium">web platforms</span> as a software engineer
-        and solution analyst.
-      </p>
+      <div>
+        <div className="font-display text-[44px] font-bold text-[#20242b] leading-[1]">
+          01
+        </div>
+        <div className="font-mono text-[12px] tracking-[0.14em] uppercase text-[#8ba6cc] mt-[8px]">
+          About
+        </div>
+      </div>
+      <div className="text-[16px] leading-[1.7] text-[#8a909c] max-w-[700px] flex flex-col gap-[20px]">
+        <h2 className="font-display font-semibold text-[34px] tracking-[-0.02em] m-0 mb-[8px] text-[#e6e8ec] leading-[1.1]">
+          Building reliable backend infrastructure and secure systems.
+        </h2>
 
-      <p className="mb-3">
-        Today I&apos;m pivoting into{" "}
-        <span className="font-medium">applied cybersecurity</span>. I&apos;m an{" "}
-        <span className="font-medium">
-          Erasmus Mundus Joint Master&apos;s student in Applied Cybersecurity
-        </span>{" "}
-        currently based at{" "}
-        <span className="font-medium">Kadir Has University in Istanbul</span>,
-        and I will continue my second-year mobility in{" "}
-        <span className="font-medium">Germany</span>. My main areas of interest
-        are <span className="font-medium">system security</span>,{" "}
-        <span className="font-medium">network defense</span>, and{" "}
-        <span className="font-medium">penetration testing</span>.
-      </p>
+        <p className="m-0">
+          For the past three years, I’ve worked at the core of Bangladesh’s financial technology sector, designing the APIs, data models, and system architectures that power platforms like Nagad and BRAC Bank. In high-volume, heavily regulated environments, I focus on building infrastructure where uptime, data integrity, and compliance are guaranteed.
+        </p>
 
-      <p>
-        I enjoy translating <span className="font-medium">attack paths</span> and{" "}
-        <span className="font-medium">misconfigurations</span>—from platforms
-        like <span className="font-medium">Hack The Box</span> and lab
-        environments—into <span className="font-medium">secure designs</span> and{" "}
-        <span className="font-medium">hardening strategies</span>. My toolkit spans{" "}
-        <span className="font-medium">
-          Python, Django, Laravel, Next.js, and database-heavy systems
-        </span>
-        , and I&apos;m actively layering on{" "}
-        <span className="font-medium">
-          offensive testing, threat modeling, and secure architecture
-        </span>{" "}
-        skills as I grow into a cybersecurity-focused engineer.
-      </p>
+        <p className="m-0">
+          My work has spanned from migrating core payment gateways to the 3DS2 standard, to engineering hardware-integrated payment prototypes. I specialize in the technical ownership of a product's lifecycle—from the initial API handshake and merchant onboarding to production deployment and monitoring.
+        </p>
 
+        <p className="m-0">
+          Through building heavily targeted financial systems, I learned that security cannot be treated as an afterthought. This led me to pursue an MSc in Cybersecurity, where my research focuses on privacy-preserving machine learning. I approach system design with a strict secure-by-default philosophy, ensuring that trust boundaries are respected at every layer.
+        </p>
 
-    </motion.section>
+        <p className="m-0">
+          Beyond enterprise payments, I am the Technical Co-Founder of monitowl, a multi-tenant SaaS for supply-chain visibility. I architected the platform from the ground up, implementing a real-time data ingestion layer, attribute-based access control (ABAC), and strict tenant isolation using <span className="font-mono text-[13.5px] text-[#8ba6cc]">Django, PostgreSQL, Redis, and RabbitMQ</span>.
+        </p>
+
+        <p className="m-0 text-[#e6e8ec] font-medium pt-[4px]">
+          I am currently relocating to the EU and seeking backend engineering or system design roles. I thrive on solving complex problems in distributed systems, API architecture, and platform security.
+        </p>
+      </div>
+    </div>
   );
 }
