@@ -15,7 +15,7 @@ export default function Contact() {
     >
       <div>
         <div className="font-display text-[44px] font-bold text-[#20242b] leading-[1]">
-          06
+          07
         </div>
         <div className="font-mono text-[12px] tracking-[0.14em] uppercase text-[#8ba6cc] mt-[8px]">
           Contact
