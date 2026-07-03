@@ -58,7 +58,7 @@ export default function Education() {
       </div>
 
       <div>
-        <h2 className="font-display font-semibold text-[34px] m-0 mb-[36px] tracking-[-0.02em] text-[#e6e8ec] leading-[1.1]">
+        <h2 className="font-display font-semibold text-[36px] m-0 mb-[40px] tracking-tight text-[#e6e8ec] leading-[1.1]">
           Academic path
         </h2>
 

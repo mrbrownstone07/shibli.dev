@@ -22,7 +22,7 @@ export default function Contact() {
         </div>
       </div>
       <div>
-        <h2 className="font-display font-semibold text-[42px] tracking-[-0.02em] m-0 mb-[20px] leading-[1.1] max-w-[640px] text-[#e6e8ec]">
+        <h2 className="font-display font-semibold text-[44px] tracking-tight m-0 mb-[24px] leading-[1.1] max-w-[640px] text-[#e6e8ec]">
           Let's talk about building systems that hold up under pressure.
         </h2>
         <a

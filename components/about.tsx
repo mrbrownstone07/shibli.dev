@@ -22,7 +22,7 @@ export default function About() {
         </div>
       </div>
       <div className="text-[16px] leading-[1.7] text-[#8a909c] max-w-[700px] flex flex-col gap-[20px]">
-        <h2 className="font-display font-semibold text-[34px] tracking-[-0.02em] m-0 mb-[8px] text-[#e6e8ec] leading-[1.1]">
+        <h2 className="font-display font-semibold text-[36px] tracking-tight m-0 mb-[12px] text-[#e6e8ec] leading-[1.1]">
           Building reliable backend infrastructure and secure systems.
         </h2>
 
