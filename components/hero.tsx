@@ -7,7 +7,7 @@ export default function Hero() {
   const { ref } = useSectionInView("Home", 0.5);
 
   return (
-    <section ref={ref} id="home" className="border-b border-[#17191d] grid grid-cols-1 lg:grid-cols-[1.7fr_1fr]">
+    <section ref={ref} id="home" className="pt-[72px] border-b border-[#17191d] grid grid-cols-1 lg:grid-cols-[1.7fr_1fr]">
       {/* Left Column */}
       <div className="px-[44px] py-[76px] lg:border-r border-[#17191d]">
         <div className="font-mono text-[12px] tracking-[0.18em] uppercase text-[#8ba6cc] mb-[28px]">
